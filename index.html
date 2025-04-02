@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///H:/Learn/Testing/rockpaperscissors.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: #1e1e2f;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin-top: 20px;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-bottom: 30px;
+    }
+
+    .Game-Container {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 150px;
+    }
+
+    .Game-Container div {
+      display: inline-block;
+      text-align: center;
+    }
+
+    .Game-Container img {
+      width: 250px;
+      height: 250px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .Game-Container img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .Game-Container img:active {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #888888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+
+  <p>Choose your weapon:</p>
+
+  <div class="Game-Container">
+
+    <div class="rock">
+      <a onclick="rock()" id="rock">
+        <img src="./Images/Rock.png" alt="">
+      </a>
+    </div>
+
+    <div class="paper">
+      <a onclick="paper()" id="paper">
+        <img src="./Images/Paper.png" alt="">
+      </a>
+    </div>
+
+    <div class="scissors">
+      <a onclick="scissors()" id="scissors">
+        <img src="./Images/Scissors.png" alt="">
+      </a>
+    </div>
+
+  </div>
+
+  <script src="./main.js"></script>
+
+</body></html>
