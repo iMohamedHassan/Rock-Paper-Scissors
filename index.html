@@ -33,6 +33,7 @@
         justify-content: center;
         gap: 50px;
         margin-top: 150px;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
       }
 
       .Game-Container div {
@@ -64,6 +65,7 @@
         color: #888888;
       }
 
+      /* Media Query for Tablets */
       @media (max-width: 768px) {
         h1 {
           font-size: 2.5rem;
@@ -97,6 +99,7 @@
         .Game-Container {
           gap: 20px;
           margin-top: 50px;
+          flex-direction: column; /* Stack items vertically */
         }
 
         .Game-Container img {
