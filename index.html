@@ -60,11 +60,43 @@
       }
 
       #printResult {
-        margin-top: 30px;
+        margin-top: 50px;
         font-size: 1.5rem;
         font-weight: bold;
         color: #ffcc00;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      #scoreBoard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px; /* Space between the columns */
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: #ffcc00;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+    
+      .scoreColumn {
+        text-align: center;
+        background-color: #2a2a40;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 150px; /* Set a fixed width for each column */
+      }
+    
+      .scoreColumn p {
+        margin: 10px 0;
+        font-size: 1.2rem;
+      }
+    
+      #playerScore,
+      #computerScore {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #ffffff;
       }
 
       footer {
@@ -96,6 +128,24 @@
         #printResult {
           font-size: 1.3rem;
         }
+
+        #scoreBoard {
+          gap: 30px;
+        }
+    
+        .scoreColumn {
+          width: 120px;
+          padding: 15px;
+        }
+    
+        .scoreColumn p {
+          font-size: 1rem;
+        }
+    
+        #playerScore,
+        #computerScore {
+          font-size: 1.5rem;
+        }
       }
 
       /* Media Query for Mobile Devices */
@@ -105,7 +155,7 @@
         }
 
         p {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
         }
 
         .Game-Container {
@@ -122,36 +172,66 @@
         #printResult {
           font-size: 1.2rem;
         }
+
+        #scoreBoard {
+          flex-direction: column; /* Stack columns vertically */
+          gap: 20px;
+        }
+    
+        .scoreColumn {
+          width: 100%; /* Full width for smaller screens */
+          padding: 10px;
+        }
+    
+        .scoreColumn p {
+          font-size: 0.9rem;
+        }
+    
+        #playerScore,
+        #computerScore {
+          font-size: 1.2rem;
+        }
       }
     </style>
   </head>
   <body>
     <h1>Rock Paper Scissors</h1>
-
+  
     <p>Choose your weapon:</p>
-
+  
+    <div id="scoreBoard">
+      <div class="scoreColumn">
+        <p>Player Score:</p>
+        <p id="playerScore">0</p>
+      </div>
+      <div class="scoreColumn">
+        <p>Computer Score:</p>
+        <p id="computerScore">0</p>
+      </div>
+    </div>
+  
     <div class="Game-Container">
       <div class="rock">
         <a onclick="rock()" id="rock">
           <img src="./Images/Rock.png" alt="" />
         </a>
       </div>
-
+  
       <div class="paper">
         <a onclick="paper()" id="paper">
           <img src="./Images/Paper.png" alt="" />
         </a>
       </div>
-
+  
       <div class="scissors">
         <a onclick="scissors()" id="scissors">
           <img src="./Images/Scissors.png" alt="" />
         </a>
       </div>
     </div>
-
-      <p id="printResult"></p>
-
+  
+    <p id="printResult"></p>
+  
     <script src="./main.js"></script>
   </body>
 </html>
