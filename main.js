@@ -294,7 +294,9 @@ function rock(){
     result = 'You Win';
   }
 
-  alert(`You Picked Rock, Computer picked ${computerMove}. ${result}`);
+  let printResult = document.querySelector('#printResult');
+
+  printResult.textContent = `You Picked Scissors, Computer picked ${computerMove}. ${result}`;
 }
 function paper(){
   const rock = "rock";
@@ -323,7 +325,9 @@ function paper(){
     result = 'You Lose';
   }
 
-  alert(`You Picked Paper, Computer picked ${computerMove}. ${result}`);
+  let printResult = document.querySelector('#printResult');
+
+  printResult.textContent = `You Picked Scissors, Computer picked ${computerMove}. ${result}`;
 }
 function scissors(){
   const rock = "rock";
@@ -353,5 +357,7 @@ function scissors(){
     result = 'Tie';
   }
 
-  alert(`You Picked Scissors, Computer picked ${computerMove}. ${result}`);
+  let printResult = document.querySelector('#printResult');
+
+  printResult.textContent = `You Picked Scissors, Computer picked ${computerMove}. ${result}`;
 }
